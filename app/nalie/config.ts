@@ -18,7 +18,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const NALIE_WHATSAPP: string = ''
-export const SUBMIT_URL: string = ''
+// The dashboard lives in this same project, so every application lands in /os/deals.
+export const SUBMIT_URL: string = '/api/lead'
 
 
 // ─── The two ways into ONE programme ────────────────────────────────────────

@@ -1,0 +1,12 @@
+export const NAVY = '#212A4D'
+export const PURPLE = '#7C3AED'
+export const PURPLE_HI = '#8B52F5'
+export const PAPER = '#FFFFFF'
+export const CREAM = '#F3F0EA'
+export const INK = '#181A2A'
+export const BODY = '#4C4F63'
+export const MUTED = '#6E7186'
+export const LINE = 'rgba(24,26,42,.12)'
+
+export const GOLD_MARK = '#E7B65C'
+export const GOLD_INK = '#8A5C00'

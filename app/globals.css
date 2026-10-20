@@ -1,3 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --font-display: var(--font-poppins), system-ui, sans-serif;
+  --font-body: var(--font-quicksand), system-ui, sans-serif;
+}
+
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: #0d0f12; }
-body { -webkit-font-smoothing: antialiased; }
+html, body { margin: 0; padding: 0; }
+body { font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+
+/* Landing page (/nalie): dark behind the page edges and overscroll, and form
+   controls keep the browser line-height it was designed with (Tailwind's reset
+   above would make them inherit the taller body line-height). */
+body:has(.rm) { background: #0d0f12; }
+.rm button, .rm input, .rm textarea { line-height: normal; }

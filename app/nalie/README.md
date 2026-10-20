@@ -25,20 +25,22 @@ EN / DE switch in the top bar linking to the other.
 
 ## Before running ads
 
-1. In `config.ts`, set **`NALIE_WHATSAPP`** (digits only, e.g. `4915112345678`)
-   and/or **`SUBMIT_URL`** (a webhook from his CRM, GoHighLevel, Make, Zapier,
-   n8n or Formspree). With both empty, applications go nowhere.
+1. `SUBMIT_URL` in `config.ts` is already `/api/lead`, the dashboard in this
+   project. Applications are saved once the dashboard's database (Supabase) is
+   set up; see the README at the project root. Optionally set
+   **`NALIE_WHATSAPP`** (digits only, e.g. `4915112345678`) so the result screen
+   also offers a WhatsApp button with all his answers typed out to Nalie.
 2. Nalie's photo is `nalie.jpg` (4:5) and `nalie-avatar.jpg` (square) in this folder. Replace the files to change it.
 3. Add his own Meta pixel and cookie banner in his project; this folder has none.
 
 ## Send applications to the Business OS dashboard
 
-If he runs the Business OS dashboard, set `SUBMIT_URL` to
-`https://<dashboard-domain>/api/lead` and add this page's domain to the
-dashboard's `LEAD_ALLOWED_ORIGINS`. Every application then lands as a lead,
-tagged `Reliable Man` plus its fit (Private / Brotherhood / Later), with all
-answers in the notes. If the page lives inside the dashboard project itself,
-`SUBMIT_URL` can simply be `/api/lead`.
+Already connected: this page lives inside the dashboard project, so
+`SUBMIT_URL` is simply `/api/lead`. Every application lands as a lead in
+`/os/deals`, tagged `Reliable Man` plus its fit (Private / Brotherhood / Later),
+with all answers in the notes. If the page ever moves to another project, set
+`SUBMIT_URL` to `https://<dashboard-domain>/api/lead` and add this page's domain
+to the dashboard's `LEAD_ALLOWED_ORIGINS`.
 
 ## How the form decides
 
